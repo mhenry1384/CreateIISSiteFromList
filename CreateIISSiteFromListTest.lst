@@ -1,0 +1,80 @@
+[SSLCertificateThumbprints]
+# Example of a comment line
+QA, *,  15e94b95cb890988a06ddddd5b9d4e55813d99c8
+# Example of a comment line
+QA2, *, cf579d5500071bc26e2af3dffea231c8b5762d18
+QA3, *, 06e30fd40a5f58c4670ae04b79ae8aa01224b71f
+Staging, 192.168.208.249,‎ 1b2c95c242cd28228d0e043c15aa2105130912a9
+Staging, 192.168.209.28, 3c3ee00513b8bbe7c45c8a90ecc781b246cd367c
+Staging, 192.168.209.29, 8f45f13392813872dffaa68811bce1a203ca2d13
+Prod, 192.168.200.91, ad4bcb1392eef29e5b70402b5b5a6b863b044a16
+Prod2, 192.168.200.92, ad4bcb1392eef29e5b70402b5b5a6b863b044a16
+DR, 192.168.208.252, ad4bcb1392eef29e5b70402b5b5a6b863b044a16
+Prod, 192.168.201.106, c0b94d30a43408d335bbaec77b891a1669a8b85c
+Prod2, 192.168.201.107, c0b94d30a43408d335bbaec77b891a1669a8b85c
+DR, 192.168.208.253, c0b94d30a43408d335bbaec77b891a1669a8b85c
+Prod, 192.168.201.137, fbe4a396aee28619d7880a989314c7ce0bf4d938
+Prod2, 192.168.201.138, fbe4a396aee28619d7880a989314c7ce0bf4d938
+DR, 192.168.208.254, fbe4a396aee28619d7880a989314c7ce0bf4d938
+
+[Bindings-QA]
+FOO2016-Portal, HTTP/HTTPS, *, 2016FOOdealeraccess.qabar1.whatever.com
+FOO2016-Portal, HTTP, *:45, 2016FOOdealeraccess.qabar1.whatever.com
+FOO2016-Portal, HTTP/HTTPS, *, 2016eggdealeraccess.qabar1.whatever.com
+FOO2016-Portal, HTTP/HTTPS, *, 2016bacondealeraccess.qabar1.whatever.com
+FOO2016-Portal, HTTP/HTTPS, *, 2016toast.qabar1.whatever.com
+FOO2016-PortalAPI, HTTP/HTTPS, *, api-2016FOOdealeraccess.qabar1.whatever.com
+# Example of a comment line
+FOO2016-STS, HTTP/HTTPS, *, sts-2016FOOdealeraccess.qabar1.whatever.com
+FOO2016-Portal, HTTP, *, chat.FOOdealeraccess.com
+
+[Bindings-QA2]
+FOO2016-Portal, HTTP/HTTPS, *, 2016FOOdealeraccess.qabar2.whatever.com
+FOO2016-Portal, HTTP/HTTPS, *, 2016eggdealeraccess.qabar2.whatever.com
+FOO2016-Portal, HTTP/HTTPS, *, 2016bacondealeraccess.qabar2.whatever.com
+FOO2016-Portal, HTTP/HTTPS, *, 2016toast.qabar2.whatever.com
+FOO2016-PortalAPI, HTTP/HTTPS, *, api-2016FOOdealeraccess.qabar2.whatever.com
+FOO2016-STS, HTTP/HTTPS, *, sts-2016FOOdealeraccess.qabar2.whatever.com
+
+[Bindings-QA3]
+FOO2016-Portal, QA3, HTTP/HTTPS, *, 2016FOOdealeraccess.qabar3.whatever.com
+FOO2016-Portal, QA3, HTTP/HTTPS, *, 2016eggdealeraccess.qabar3.whatever.com
+FOO2016-Portal, QA3, HTTP/HTTPS, *, 2016bacondealeraccess.qabar3.whatever.com
+FOO2016-Portal, QA3, HTTP/HTTPS, *, 2016toast.qabar3.whatever.com
+FOO2016-PortalAPI, QA3, HTTP/HTTPS, *, api-2016FOOdealeraccess.qabar3.whatever.com
+FOO2016-STS, QA3, HTTP/HTTPS, *, sts-2016FOOdealeraccess.qabar3.whatever.com
+
+[Bindings-Staging]
+FOO2016-Portal, HTTP/HTTPS, 192.168.208.249, staging.FOOdealeraccess.com
+FOO2016-Portal, HTTP/HTTPS, 192.168.209.28, staging.eggdealeraccess.com
+FOO2016-Portal, HTTP/HTTPS, 192.168.209.29, staging.bacondealeraccess.com
+FOO2016-Portal, HTTP/HTTPS, *, staging.toast.com
+FOO2016-PortalAPI, HTTP/HTTPS, 192.168.208.249, staging.api.FOOdealeraccess.com
+FOO2016-STS, HTTP/HTTPS, 192.168.208.249, staging.sts.FOOdealeraccess.com
+
+[Bindings-Prod]
+FOO2016-Portal, HTTP/HTTPS, 192.168.200.91, FOOdealeraccess.com
+FOO2016-Portal, HTTP/HTTPS, 192.168.201.106, eggdealeraccess.com
+FOO2016-Portal, HTTP/HTTPS, 192.168.201.137, bacondealeraccess.com
+FOO2016-Portal, HTTP/HTTPS, *, toast.com
+FOO2016-Portal, HTTP/HTTPS, chat.FOOdealeraccess.com
+FOO2016-PortalAPI, HTTP/HTTPS, 192.168.200.91, api.FOOdealeraccess.com
+FOO2016-STS, HTTP/HTTPS, 192.168.200.91, sts.FOOdealeraccess.com
+
+[Bindings-Prod2]
+FOO2016-Portal, HTTP/HTTPS, 192.168.200.92, FOOdealeraccess.com
+FOO2016-Portal, HTTP/HTTPS, 192.168.201.107, eggdealeraccess.com
+FOO2016-Portal, HTTP/HTTPS, 192.168.201.138, bacondealeraccess.com
+FOO2016-Portal, HTTP, *, toast.com
+FOO2016-Portal, HTTP, *, chat.FOOdealeraccess.com
+FOO2016-PortalAPI, HTTP/HTTPS, 192.168.200.92, api.FOOdealeraccess.com
+FOO2016-STS, HTTP/HTTPS, 192.168.200.92, sts.FOOdealeraccess.com
+
+[Bindings-DR]
+FOO2016-DR-Portal, HTTP/HTTPS, 192.168.208.252, FOOdealeraccess.com
+FOO2016-DR-Portal, HTTP/HTTPS, 192.168.208.253, eggdealeraccess.com
+FOO2016-DR-Portal, HTTP/HTTPS, 192.168.208.254, bacondealeraccess.com
+FOO2016-DR-Portal, HTTP, *, toast.com
+FOO2016-DR-Portal, HTTP, *, chat.FOOdealeraccess.com
+FOO2016-DR-PortalAPI, HTTP/HTTPS, 192.168.208.252, api.FOOdealeraccess.com
+FOO2016-DR-STS, HTTP/HTTPS, 192.168.208.252, FOOdealeraccess.com
